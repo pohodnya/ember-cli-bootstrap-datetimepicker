@@ -48,6 +48,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
+    "fastboot-transform": "^0.1.2",
     "loader.js": "^4.2.3",
     "moment": "^2.19.1",
     "moment-timezone": "^0.5.13"

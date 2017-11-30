@@ -7,11 +7,17 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    if (!process.env.EMBER_CLI_FASTBOOT) {
-      // Import unminified css and js
-      let basePath = 'node_modules/eonasdan-bootstrap-datetimepicker';
-      app.import(`${basePath}/build/css/bootstrap-datetimepicker.css`);
-      app.import(`${basePath}/src/js/bootstrap-datetimepicker.js`);
-    }
+    // Import unminified css and js
+    let basePath = 'node_modules/eonasdan-bootstrap-datetimepicker';
+    app.import(`${basePath}/build/css/bootstrap-datetimepicker.css`, {
+      using: [{
+        transformation: 'fastboot-transform'
+      }]
+    });
+    app.import(`${basePath}/src/js/bootstrap-datetimepicker.js`, {
+      using: [{
+        transformation: 'fastboot-transform'
+      }]
+    });
   }
 };
