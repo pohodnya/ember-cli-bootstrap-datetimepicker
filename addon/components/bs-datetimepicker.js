@@ -5,7 +5,7 @@ import layout from '../templates/components/bs-datetimepicker';
 
 const {
   defaults
-} = $.fn.datetimepicker;
+} = ($.fn || {}).datetimepicker;
 
 export default Component.extend({
   layout,
